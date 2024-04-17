@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Todo List </h1>
+            <ul>
+                {% for todo in todos %}
+                <li>
+                    {{ todo.title }} : {% if todo.completed %} Completed {% else %} Not Completed {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
